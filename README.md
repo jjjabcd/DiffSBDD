@@ -161,9 +161,9 @@ python process_crossdock.py <crossdocked_dir> --no_H
 #### Data preparation
 Download the dataset
 ```bash
-wget http://www.bindingmoad.org/files/biou/every_part_a.zip
-wget http://www.bindingmoad.org/files/biou/every_part_b.zip
-wget http://www.bindingmoad.org/files/csv/every.csv
+wget https://zenodo.org/records/13375913/files/every_part_a.zip
+wget https://zenodo.org/records/13375913/files/every_part_b.zip
+wget https://zenodo.org/records/13375913/files/every.csv
 
 unzip every_part_a.zip
 unzip every_part_b.zip
