@@ -137,7 +137,7 @@ def batch_to_list(data, batch_mask):
     # make sure batch_mask is increasing
     idx = torch.argsort(batch_mask)
     batch_mask = batch_mask[idx]
-    data = data[idx]
+    data = data[idx.to(data.device)]
 
     chunk_sizes = torch.unique(batch_mask, return_counts=True)[1].tolist()
     return torch.split(data, chunk_sizes)

@@ -205,11 +205,12 @@ if __name__ == "__main__":
     parser.add_argument('--resamplings', type=int, default=20)
     parser.add_argument('--timesteps', type=int, default=50)
     parser.add_argument('--save_traj', action='store_true')
+    parser.add_argument('--device', type=str, default='cuda')
     args = parser.parse_args()
 
     pdb_id = Path(args.pdbfile).stem
 
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = args.device
 
     # Load model
     model = LigandPocketDDPM.load_from_checkpoint(
